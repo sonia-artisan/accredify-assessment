@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .h1 {
+        @apply text-3xl md:text-4xl xl:text-[48px] !leading-tight font-semibold;
+    }
+}
