@@ -10,13 +10,12 @@ const UserIcon = () => {
 	useEffect(() => {
 		dispatch(fetchUser())
 	}, [dispatch])
-	console.log('userData:',userData);
 
-  if (!userData.data || !userData.record || !userData.record.data) {
-    return <div>Loading...</div>;
+  if (!userData.data) {
+    return userImage = SampleUserIcon;
   }
   
-  const userImage = userData.data?.record?.data?.profile_picture_url || SampleUserIcon;
+  const userImage = userData.data?.record?.data?.profile_picture_url;
   
 
 	return (
