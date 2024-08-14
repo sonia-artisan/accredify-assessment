@@ -7,7 +7,7 @@ import SettingsIcon from "/src/assets/sidebar/settings.svg";
 
 const SidebarItem = ({ icon, label, isSelected, onClick }) => {
   return (
-    <li className={`py-2 `}>
+    <li className="py-2">
       <a
         className={`flex flex-col items-center justify-center pb-5 ${isSelected ? "bg-sidebar-active" : ""}`}
         onClick={onClick}
@@ -28,9 +28,12 @@ const SidebarItem = ({ icon, label, isSelected, onClick }) => {
 const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useState("Home");
 
-  const handleItemClick = (label) => {
-    setSelectedItem(label);
-  };
+  const sidebarItems = [
+    { icon: HomeIcon, label: "Home" },
+    { icon: DocumentIcon, label: "Documents" },
+    { icon: ShieldIcon, label: "Security" },
+    { icon: SettingsIcon, label: "Settings" },
+  ];
 
   return (
     <aside className="w-16 h-screen bg-sidebar-background text-white">
@@ -44,34 +47,16 @@ const Sidebar = () => {
         </div>
 
         <ul>
-          <SidebarItem
-            icon={HomeIcon}
-            label="Home"
-            link="/"
-            isSelected={selectedItem === "Home"}
-            onClick={() => handleItemClick("Home")}
-          />
-          <SidebarItem
-            icon={DocumentIcon}
-            label="Documents"
-            link="/documents"
-            isSelected={selectedItem === "Documents"}
-            onClick={() => handleItemClick("Documents")}
-          />
-          <SidebarItem
-            icon={ShieldIcon}
-            label="Security"
-            link="/security"
-            isSelected={selectedItem === "Security"}
-            onClick={() => handleItemClick("Security")}
-          />
-          <SidebarItem
-            icon={SettingsIcon}
-            label="Settings"
-            link="/settings"
-            isSelected={selectedItem === "Settings"}
-            onClick={() => handleItemClick("Settings")}
-          />
+          {sidebarItems.map((item) => (
+              <SidebarItem
+                key={item.label}
+                icon={item.icon}
+                label={item.label}
+                link={item.link}
+                isSelected={selectedItem === item.label}
+                onClick={() => setSelectedItem(item.label)}
+              />
+            ))}
         </ul>
       </nav>
     </aside>
