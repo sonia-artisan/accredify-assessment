@@ -47,7 +47,7 @@ const Sidebar = () => {
 	return (
 		<aside className="w-16 h-screen bg-sidebar-background text-white">
 			<nav className="">
-				<UserIcon icon={ManagedUserImage} />
+				<UserIcon />
 
 				<ul>
 					{sidebarItems.map((item) => (
