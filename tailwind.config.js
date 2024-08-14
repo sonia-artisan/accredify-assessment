@@ -9,6 +9,7 @@ export default {
       colors: {
         accent: "#493DF5",
         subtitle: "#5B6270",
+        border: "#D0D2D6",
         sidebar: {
           background: "#151F32",
           active: "#353D4E",
