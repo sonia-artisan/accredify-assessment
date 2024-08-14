@@ -5,6 +5,7 @@ import UserIcon from './UserIcon';
 import ManagedUserImage from '/src/assets/managed_user.png';
 import HomeIcon from '/src/assets/sidebar/home.svg';
 import DocumentIcon from '/src/assets/sidebar/document.svg';
+import LightbulbIcon from '/src/assets/sidebar/lightbulb.svg';
 import ShieldIcon from '/src/assets/sidebar/shield.svg';
 import SettingsIcon from '/src/assets/sidebar/settings.svg';
 
@@ -40,7 +41,8 @@ const Sidebar = () => {
 	const sidebarItems = [
 		{ icon: HomeIcon, label: 'Home' },
 		{ icon: DocumentIcon, label: 'Documents' },
-		{ icon: ShieldIcon, label: 'Security' },
+		{ icon: LightbulbIcon, label: 'Insights'},
+		{ icon: ShieldIcon, label: 'Privacy' },
 		{ icon: SettingsIcon, label: 'Settings' },
 	];
 
