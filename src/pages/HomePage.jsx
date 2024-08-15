@@ -35,7 +35,7 @@ const HomePage = () => {
 	return (
 		<div className='page-container'>
 			<div className='page-heading-text'>
-				<Title titleText={`Hi, ${userName}`} />
+				<Title titleText={`Hi, ${userName} 👋`} />
 				<Subtitle subtitleText={subtitleText} />
 			</div>
 			<div className='home-page-content-container'>
