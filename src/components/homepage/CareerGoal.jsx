@@ -13,16 +13,17 @@ const CareerGoal = () => {
 		dispatch(fetchCareerGoal());
 	}, [dispatch]);
 
-	
-	console.log(careerGoalData);
-
 	const careerName = careerGoalData.data?.record?.data[0].name;
 	const careerProgress = careerGoalData.data?.record?.data[0].progress;
+
+	const startsWithVowel = careerName && /^[aeiouAEIOU]/.test(careerName);
+	const indefiniteArticle = startsWithVowel ? 'an' : 'a';
+
 	return (
 		<Container>
 			<CircularProgress value={careerProgress} />
-			<div>
-				<div>I want to become a</div>
+			<div className="text-center">
+				<div>I want to become {indefiniteArticle}</div>
 				<div className='h2'>{careerName}</div>
 			</div>
       <div className='body-bold text-accent'>View Insights</div>
