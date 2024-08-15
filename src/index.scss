@@ -23,6 +23,10 @@
         @apply text-sm font-semibold;
     }
 
+    .page-container {
+        @apply my-16 mx-24 flex flex-col gap-16
+    }
+
     .section {
         @apply flex flex-col gap-6;
     }

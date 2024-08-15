@@ -1,16 +1,11 @@
-.home-page-container {
-    @apply my-16 mx-24 flex flex-col gap-16;
-    
-    .home-page-content-container {
-        @apply grid grid-cols-3 gap-10;
-    
-        .career-goal-section {
-            @apply col-span-3 md:col-span-1;
-        }
-    
-        .recent-documents-section {
-            @apply col-span-3 md:col-span-2;
-        }
+.home-page-content-container {
+    @apply grid grid-cols-3 gap-10;
+
+    .career-goal-section {
+        @apply col-span-3 md:col-span-1;
+    }
+
+    .recent-documents-section {
+        @apply col-span-3 md:col-span-2;
     }
 }
-

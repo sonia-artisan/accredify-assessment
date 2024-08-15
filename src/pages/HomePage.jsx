@@ -8,7 +8,7 @@ import RecentDocuments from '../components/homepage/RecentDocuments';
 
 const HomePage = () => {
 	return (
-		<div className='home-page-container'>
+		<div className='page-container'>
 			<div className='page-heading-text'>
 				<Title titleText='Hi, Gerald Goh' />
 				<Subtitle subtitleText='Manage your documents issued by SMU Academy or track your career goal.' />
