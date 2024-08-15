@@ -28,11 +28,15 @@ const HomePage = () => {
     ? userData.data?.record?.data?.name 
     : personalUserData.data?.record?.data?.name;
 
+	const subtitleText = userType === 'managedUser' 
+    ? 'Manage your documents issued by SMU Academy or track your career goal.'
+    : 'Manage your documents.';
+
 	return (
 		<div className='page-container'>
 			<div className='page-heading-text'>
 				<Title titleText={`Hi, ${userName}`} />
-				<Subtitle subtitleText='Manage your documents issued by SMU Academy or track your career goal.' />
+				<Subtitle subtitleText={subtitleText} />
 			</div>
 			<div className='home-page-content-container'>
 				<div className='section career-goal-section'>
