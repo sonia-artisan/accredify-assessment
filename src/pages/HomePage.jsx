@@ -24,13 +24,15 @@ const HomePage = () => {
     }
   }, [dispatch, userType]);
 
-  const userName = userType === 'managedUser' 
+  	const userName = userType === 'managedUser' 
     ? userData.data?.record?.data?.name 
     : personalUserData.data?.record?.data?.name;
 
 	const subtitleText = userType === 'managedUser' 
     ? 'Manage your documents issued by SMU Academy or track your career goal.'
     : 'Manage your documents.';
+
+	const isManagedUser = userType === 'managedUser';
 
 	return (
 		<div className='page-container'>
@@ -39,11 +41,13 @@ const HomePage = () => {
 				<Subtitle subtitleText={subtitleText} />
 			</div>
 			<div className='home-page-content-container'>
-				<div className='section career-goal-section'>
-					<SectionHeading headingText='Career Goal' />
-					<CareerGoal />
-				</div>
-				<div className='section recent-documents-section'>
+				{isManagedUser && (
+					<div className='section career-goal-section'>
+						<SectionHeading headingText='Career Goal' />
+						<CareerGoal />
+					</div>
+				)}
+				<div className={`section recent-documents-section ${isManagedUser ? 'managed-user' : 'personal-user'}`}>
 					<SectionHeading
 						headingText='Recent Documents'
 						actionText='View all documents'
