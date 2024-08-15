@@ -2,10 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/userSlice";
 import { fetchPersonalUser } from "../redux/personalUserSlice";
 import { toggleUserType } from "../redux/toggleSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import '../styles/components/Header.scss';
 
 import Button from './Button';
+import PopupMenu from './PopupMenu'; 
 
 import ChevronDown from '/src/assets/chevron_down.svg';
 
@@ -14,6 +15,7 @@ const Header = () => {
 	const userData = useSelector(state => state.user);
   const personalUserData = useSelector(state => state.personalUser);
   const userType = useSelector(state => state.userType);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
 	useEffect(() => {
     if (userType === 'managedUser') {
@@ -31,11 +33,16 @@ const Header = () => {
     dispatch(toggleUserType());
   };
 
+  const handleMenuButtonClick = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <div className='header-background'>
         <div className='header-foreground'>
           <Button label={userType === 'managedUser' ? 'Managed User' : 'Personal User'} isToggle onClick={handleToggleClick} />
-          <Button label={userName} icon={ChevronDown} />
+          <Button label={userName} icon={ChevronDown} onClick={handleMenuButtonClick} isPopupOpen={isPopupOpen}/>
+          {isPopupOpen && <PopupMenu userName={userName}/>}
         </div>
     </div>
   )
