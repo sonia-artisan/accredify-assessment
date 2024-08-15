@@ -3,7 +3,8 @@ import '../styles/components/Table.scss';
 
 import Action from './Action';
 
-const Table = ({ items, icon }) => {
+const Table = ({ items = [], icon }) => {
+	const sortedItems = [...items].sort((a, b) => new Date(b.received_on) - new Date(a.received_on));
 
 	return (
 		<table className='min-w-full'>
@@ -14,7 +15,7 @@ const Table = ({ items, icon }) => {
 				</tr>
 			</thead>
 			<tbody>
-				{items && items.map((item, index) => (
+				{sortedItems && sortedItems.map((item, index) => (
 					<tr key={index} className='border-y-2'>
 						<td className='row-spacing gap-4 flex items-center body-bold'>
 							<div >
