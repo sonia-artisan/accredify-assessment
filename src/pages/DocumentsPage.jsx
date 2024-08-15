@@ -3,8 +3,9 @@ import Subtitle from '../components/Subtitle';
 
 const DocumentsPage = () => {
   return (
-    <div className='bg-red-200'>
+    <div className='page-heading-text'>
         <Title titleText='Documents Page' />
+        <Subtitle subtitleText='View all your documents here!' />
     </div>
   )
 }

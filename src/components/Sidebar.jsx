@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/components/Sidebar.scss';
 
 import UserIcon from './UserIcon';
@@ -14,9 +15,7 @@ const SidebarItem = ({ icon, label, isSelected, onClick }) => {
 	return (
 		<li className='py-2'>
 			<a
-				className={`sidebar-item-anchor ${
-					isSelected ? 'bg-sidebar-active' : ''
-				}`}
+				className={`sidebar-item-anchor ${isSelected ? 'bg-sidebar-active' : ''}`}
 				onClick={onClick}
 			>
 				<div className='sidebar-icon-wrapper'>
@@ -38,14 +37,20 @@ const SidebarItem = ({ icon, label, isSelected, onClick }) => {
 
 const Sidebar = () => {
 	const [selectedItem, setSelectedItem] = useState('Home');
+	const navigate = useNavigate();
 
 	const sidebarItems = [
-		{ icon: HomeIcon, label: 'Home' },
-		{ icon: DocumentIcon, label: 'Documents' },
-		{ icon: LightbulbIcon, label: 'Insights' },
-		{ icon: ShieldIcon, label: 'Privacy' },
-		{ icon: SettingsIcon, label: 'Settings' },
+		{ icon: HomeIcon, label: 'Home', link: '/' },
+		{ icon: DocumentIcon, label: 'Documents', link: '/my-documents' },
+		{ icon: LightbulbIcon, label: 'Insights', link: '/my-insights' },
+		{ icon: ShieldIcon, label: 'Privacy', link: '/privacy-policy' },
+		{ icon: SettingsIcon, label: 'Settings', link: '/settings' },
 	];
+
+	const handleItemClick = (label, link) => {
+		setSelectedItem(label);
+		navigate(link);
+	};
 
 	return (
 		<aside className='sidebar'>
@@ -58,9 +63,8 @@ const Sidebar = () => {
 							key={item.label}
 							icon={item.icon}
 							label={item.label}
-							link={item.link}
 							isSelected={selectedItem === item.label}
-							onClick={() => setSelectedItem(item.label)}
+							onClick={() => handleItemClick(item.label, item.link)}
 						/>
 					))}
 				</ul>

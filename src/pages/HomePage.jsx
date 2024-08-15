@@ -13,7 +13,7 @@ const HomePage = () => {
 				<Title titleText='Hi, Gerald Goh' />
 				<Subtitle subtitleText='Manage your documents issued by SMU Academy or track your career goal.' />
 			</div>
-			<div className='page-content-container'>
+			<div className='home-page-content-container'>
 				<div className='section career-goal-section'>
 					<SectionHeading headingText='Career Goal' />
 					<CareerGoal />
