@@ -1,23 +1,12 @@
+import '/src/styles/components/CareerGoal.scss';
+
 import Container from '../Container';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import CircularProgress from '../CircularProgress';
 
 const CareerGoal = () => {
 	return (
 		<Container>
-			<div className='body-bold text-subtitle'>Your Progress</div>
-			<div style={{ width: '150px', height: '150px', fontWeight: 'bold' }}>
-				<CircularProgressbar
-					value={35}
-					text={`35%`}
-					styles={buildStyles({
-						textColor: '#2B22B5',
-						pathColor: '#493DF5',
-						trailColor: '#E8E9EB',
-						textSize: '16px',
-					})}
-				/>
-			</div>
+			<CircularProgress />
 			<div>
 				<div>I want to become a</div>
 				<div className='h2'>Tax Manager</div>
