@@ -4,6 +4,22 @@
 
 @layer components {
     .h1 {
-        @apply text-3xl md:text-4xl xl:text-[48px] !leading-tight font-semibold;
+        @apply text-3xl !leading-tight font-semibold;
+    }
+
+    .h2 {
+        @apply text-xl !leading-tight font-semibold;
+    }
+
+    .h4 {
+        @apply text-lg text-subtitle font-light;
+    }
+
+    .body-bold {
+        @apply text-sm font-semibold;
+    }
+
+    .section {
+        @apply flex flex-col gap-6;
     }
 }
