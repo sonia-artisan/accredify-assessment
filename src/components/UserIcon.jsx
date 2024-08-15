@@ -25,7 +25,7 @@ const UserIcon = ({ isSidebar }) => {
 
 	return (
 		<div className='flex items-center justify-center'>
-			<img className={`w-10 ${isSidebar ? 'pt-5 pb-8' : ''}`} src={userImage} alt='user-profile-image' />
+			<img className={`w-10 h-10 rounded-full ${isSidebar ? 'mt-4 mb-8' : ''}`} src={userImage} alt='user-profile-image' />
 		</div>
 	);
 };
