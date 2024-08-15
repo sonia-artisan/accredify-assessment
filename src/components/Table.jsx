@@ -8,7 +8,7 @@ const Table = ({ items, icon }) => {
 	return (
 		<table className='min-w-full'>
 			<thead>
-				<tr className='text-left body-bold'>
+				<tr className='text-left body-bold text-subtitle'>
 					<th className='row-spacing document-name-col'>Document Name</th>
 					<th className='row-spacing'>Received On</th>
 				</tr>

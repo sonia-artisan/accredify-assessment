@@ -3,7 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const CircularProgress = ({ value }) => {
   return (
-    <><div className='body-bold text-subtitle'>Your Progress</div>
+    <><div className='body-bold text-subtitle mt-6'>Your Progress</div>
     <div style={{ width: '150px', height: '150px', fontWeight: 'bold' }}>
         <CircularProgressbar
             value={value}
