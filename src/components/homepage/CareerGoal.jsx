@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCareerGoal } from '../../redux/CareerGoalSlice';
+import { fetchCareerGoal } from '../../redux/careerGoalSlice';
+import { getIndefiniteArticle } from '/src/utils/grammarFormatting.js';
 import { useEffect } from 'react';
 
 import Container from '../Container';
@@ -23,7 +24,7 @@ const CareerGoal = () => {
     <Container>
       <CircularProgress value={careerProgress} />
       <div className='text-center'>
-        <div>I want to become {indefiniteArticle}</div>
+        <div>I want to become {getIndefiniteArticle(careerName)}</div>
         <div className='h2'>{careerName}</div>
       </div>
       <div className='body-bold text-accent'>View Insights</div>

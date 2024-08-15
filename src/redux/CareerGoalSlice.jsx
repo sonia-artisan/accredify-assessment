@@ -7,7 +7,7 @@ export const fetchCareerGoal = createAsyncThunk('fetchCareerGoal', async () => {
 });
 
 const careerGoalSlice = createSlice({
-	name: 'user',
+	name: 'careerGoal',
 	initialState: {
 		isLoading: false,
 		data: {},

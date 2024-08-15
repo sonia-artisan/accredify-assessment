@@ -19,6 +19,10 @@
         @apply flex flex-col gap-3;
     }
 
+    .body {
+        @apply text-sm;
+    }
+
     .body-bold {
         @apply text-sm font-semibold;
     }
