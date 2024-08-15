@@ -4,7 +4,6 @@ import '../styles/components/Table.scss';
 import Action from './Action';
 
 const Table = ({ items, icon }) => {
-	console.log(items);
 
 	return (
 		<table className='min-w-full'>

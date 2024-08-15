@@ -28,7 +28,7 @@
     }
 
     .action-text {
-        @apply body-bold text-accent;
+        @apply body-bold text-accent cursor-pointer hover:opacity-75 hover:underline;
     }
 
     .page-container {

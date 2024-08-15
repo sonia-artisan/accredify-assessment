@@ -47,6 +47,7 @@ const HomePage = () => {
 					<SectionHeading
 						headingText='Recent Documents'
 						actionText='View all documents'
+						link='/my-documents'
 					/>
 					<RecentDocuments />
 				</div>
