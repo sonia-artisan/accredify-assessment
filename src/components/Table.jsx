@@ -1,6 +1,8 @@
 import { formatDate } from '../utils/dateFormatting';
 import '../styles/components/Table.scss';
 
+import Action from './Action';
+
 const Table = ({ items, icon }) => {
 	console.log(items);
 
@@ -8,7 +10,7 @@ const Table = ({ items, icon }) => {
 		<table className='min-w-full'>
 			<thead>
 				<tr className='text-left body-bold'>
-					<th className='row-spacing'>Document Name</th>
+					<th className='row-spacing document-name-col'>Document Name</th>
 					<th className='row-spacing'>Received On</th>
 				</tr>
 			</thead>
@@ -23,6 +25,7 @@ const Table = ({ items, icon }) => {
 							{item.document_name}
 						</td>
 						<td className='body row-spacing'>{formatDate(item.received_on)}</td>
+						<td className='body row-spacing'><Action /></td>
 					</tr>
 				))}
 			</tbody>

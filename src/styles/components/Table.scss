@@ -6,3 +6,15 @@
 .row-spacing {
     @apply py-6 px-4;
 }
+
+.document-name-col {
+    width: 60%;
+    
+    @media screen and (min-width: 1200px) {
+        width: 65%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 75%;
+    }
+}
