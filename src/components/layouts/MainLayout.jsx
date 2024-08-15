@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import Header from "../Header";
+import Footer from "../Footer";
 
 const MainLayout = ({ children }) => {
 	return (
@@ -11,6 +12,7 @@ const MainLayout = ({ children }) => {
         <main className="flex-1">
           <Outlet />
         </main>
+        <Footer />
       </div>
     </div>);
 };
