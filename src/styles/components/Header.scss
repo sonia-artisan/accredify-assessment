@@ -1,0 +1,7 @@
+.header-background {
+    @apply bg-sidebar-background;
+
+    .header-foreground {
+        @apply flex justify-end w-full -z-40 py-4 px-8 rounded-tl-xl bg-white border-b border-solid border-border;
+    }
+}

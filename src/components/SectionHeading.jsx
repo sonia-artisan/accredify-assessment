@@ -1,10 +1,10 @@
-import React from 'react'
+import '../styles/components/SectionHeading.scss';
 
 const SectionHeading = ({ headingText, actionText }) => {
   return (
-    <div className='flex justify-between items-center'>
+    <div className='section-heading-container'>
       <div className='h2'>{headingText}</div>
-      <div className='body-bold text-accent'>{actionText ||''}</div>
+      <div className='section-action-text'>{actionText ||''}</div>
     </div>
   )
 }

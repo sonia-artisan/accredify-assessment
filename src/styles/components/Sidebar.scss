@@ -1,0 +1,17 @@
+// Sidebar Item styling
+.sidebar-item-anchor {
+    @apply flex flex-col items-center justify-center pb-5;
+
+    .sidebar-icon-wrapper {
+        @apply flex items-center justify-center;
+
+        .sidebar-icon {
+            @apply w-7 pt-5 hover:cursor-pointer;
+        }
+    }
+}
+
+// Sidebar styling
+.sidebar {
+    @apply w-16 h-screen bg-sidebar-background text-white;
+}

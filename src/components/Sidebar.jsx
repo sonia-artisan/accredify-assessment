@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/components/Sidebar.scss';
 
 import UserIcon from './UserIcon';
 
@@ -11,16 +12,16 @@ import SettingsIcon from '/src/assets/sidebar/settings.svg';
 
 const SidebarItem = ({ icon, label, isSelected, onClick }) => {
 	return (
-		<li className="py-2">
+		<li className='py-2'>
 			<a
-				className={`flex flex-col items-center justify-center pb-5 ${
+				className={`sidebar-item-anchor ${
 					isSelected ? 'bg-sidebar-active' : ''
 				}`}
 				onClick={onClick}
 			>
-				<div className="flex items-center justify-center">
+				<div className='sidebar-icon-wrapper'>
 					<img
-						className="w-7 pt-5 hover:cursor-pointer"
+						className='sidebar-icon'
 						src={icon}
 						alt={`${label}-icon`}
 						style={{
@@ -41,14 +42,14 @@ const Sidebar = () => {
 	const sidebarItems = [
 		{ icon: HomeIcon, label: 'Home' },
 		{ icon: DocumentIcon, label: 'Documents' },
-		{ icon: LightbulbIcon, label: 'Insights'},
+		{ icon: LightbulbIcon, label: 'Insights' },
 		{ icon: ShieldIcon, label: 'Privacy' },
 		{ icon: SettingsIcon, label: 'Settings' },
 	];
 
 	return (
-		<aside className="w-16 h-screen bg-sidebar-background text-white">
-			<nav className="">
+		<aside className='sidebar'>
+			<nav>
 				<UserIcon />
 
 				<ul>

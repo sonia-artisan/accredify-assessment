@@ -1,5 +1,3 @@
-import '/src/styles/components/CircularProgress.scss';
-
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 

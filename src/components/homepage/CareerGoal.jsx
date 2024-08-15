@@ -1,5 +1,3 @@
-import '/src/styles/components/CareerGoal.scss';
-
 import Container from '../Container';
 import CircularProgress from '../CircularProgress';
 
