@@ -55,7 +55,7 @@ const Sidebar = () => {
 	return (
 		<aside className='sidebar'>
 			<nav>
-				<UserIcon />
+				<UserIcon isSidebar/>
 
 				<ul>
 					{sidebarItems.map((item) => (
