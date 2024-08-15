@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '../utils/navigateTo';
 import '../styles/components/PopupMenu.scss';
 
 import UserIcon from './UserIcon';
@@ -6,6 +7,8 @@ import UserIcon from './UserIcon';
 import LogOutIcon from '/src/assets/log_out.svg';
 
 const PopupMenu = ({ userName }) => {
+	const navigateTo = useNavigation();
+
   return (
     <div className='popup-menu'>
       <div className='flex flex-col gap-6'>
@@ -17,7 +20,7 @@ const PopupMenu = ({ userName }) => {
 					</div>
 				</div>
         <hr />
-        <div className='flex items-center gap-2 cursor-pointer hover:underline'>
+        <div className='flex items-center gap-2 cursor-pointer hover:underline' onClick={() => navigateTo('/sign-in')}>
           <img src={LogOutIcon} className='w-[1.1rem]'/>
           <div className='body text-subtitle pb-1 '>Log out</div>
         </div>
