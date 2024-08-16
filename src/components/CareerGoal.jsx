@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import Container from './Container';
 import CircularProgress from './CircularProgress';
 
-const CareerGoal = () => {
+const CareerGoal = ({ hideAction }) => {
   const dispatch = useDispatch();
   const careerGoalData = useSelector((state) => state.careerGoal);
 
@@ -27,7 +27,7 @@ const CareerGoal = () => {
         <div>I want to become {getIndefiniteArticle(careerName)}</div>
         <div className='h2'>{careerName}</div>
       </div>
-      <div className='action-text' onClick={() => navigateTo('/my-insights')}>View Insights</div>
+      {!hideAction && <div className='action-text' onClick={() => navigateTo('/my-insights')}>View Insights</div>}
     </Container>
   );
 };

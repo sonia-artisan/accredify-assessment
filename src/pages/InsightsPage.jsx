@@ -1,5 +1,6 @@
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
+import CareerGoal from '../components/CareerGoal';
 
 const InsightsPage = () => {
   return (
@@ -8,6 +9,7 @@ const InsightsPage = () => {
           <Title titleText='Insights Page' />
           <Subtitle subtitleText='Have a look at the top insights for the day.' />
       </div>
+      <CareerGoal hideAction />
     </div>
   )
 }
