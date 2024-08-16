@@ -20,7 +20,7 @@ const PopupMenu = ({ userName }) => {
 					</div>
 				</div>
         <hr />
-        <div className='flex items-center gap-2 cursor-pointer hover:underline' onClick={() => navigateTo('/sign-in')}>
+        <div className='logout' onClick={() => navigateTo('/sign-in')}>
           <img src={LogOutIcon} className='w-[1.1rem]'/>
           <div className='body text-subtitle pb-1 '>Log out</div>
         </div>
