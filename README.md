@@ -50,7 +50,7 @@ To run E2E tests:
 npm run dev
 ```
 
-2. Open another a separate terminal tab / window and execute the following command:
+2. Open a separate terminal tab / window and execute the following command:
 ```bash
 npx cypress open
 ```
