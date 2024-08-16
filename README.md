@@ -1,6 +1,6 @@
 # Technical Assessment for Frontend Developer 2024
 
-This is the submission by Sonia William, frontend web developer at Agmo Sdn. Bhd.. The submission is a simpler version of the Accredify whitelabelled SPA where users can view and upload verifiable documents.
+This is the submission by Sonia William, frontend web developer at Agmo Artisan Sdn. Bhd.. The submission is a simpler version of the Accredify whitelabelled SPA where users can view and upload verifiable documents.
 
 
 ## Technologies
