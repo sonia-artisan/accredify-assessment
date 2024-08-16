@@ -10,8 +10,7 @@ This is the submission by Sonia William, frontend web developer at Agmo Sdn. Bhd
 - Redux Toolkit: State management library.
 
 
-## Installation
-Please follow the steps below to run this project locally:
+## Setup and Installation
 1. Clone the repository:
 ```bash
 https://github.com/sonia-artisan/accredify-assessment.git
@@ -29,6 +28,8 @@ npm install
 
 
 ## Running the Application
+Please follow the steps below to run this project locally:
+
 1. Start the development server:
 ```bash
 npm run dev
