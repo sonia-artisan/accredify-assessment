@@ -1,4 +1,4 @@
-import ActionsButton from '/src/assets/actions_button.svg';
+import ActionsButton from '../assets/actions_button.svg';
 
 const Action = () => {
   return (

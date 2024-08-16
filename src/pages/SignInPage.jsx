@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigation } from '../utils/navigateTo';
 import '../styles/pages/SignInPage.scss';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigation } from '../utils/navigateTo';
 
 const SectionHeading = ({ headingText, actionText, link }) => {

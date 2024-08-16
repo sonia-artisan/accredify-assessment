@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCareerGoal } from '../redux/careerGoalSlice';
-import { getIndefiniteArticle } from '/src/utils/grammarFormatting.js';
-import { useNavigation } from '/src/utils/navigateTo';
-import { useEffect } from 'react';
+import { getIndefiniteArticle } from '../utils/grammarFormatting.js';
+import { useNavigation } from '../utils/navigateTo';
+import React, { useEffect } from 'react';
 
 import Container from './Container';
 import CircularProgress from './CircularProgress';
@@ -15,8 +15,8 @@ const CareerGoal = ({ hideAction }) => {
     dispatch(fetchCareerGoal());
   }, [dispatch]);
 
-  const careerName = careerGoalData.data?.record?.data[0].name;
-  const careerProgress = careerGoalData.data?.record?.data[0].progress;
+  const careerName = careerGoalData?.data?.record?.data[0].name;
+  const careerProgress = careerGoalData?.data?.record?.data[0].progress;
 
   const navigateTo = useNavigation();
 

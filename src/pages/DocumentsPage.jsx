@@ -1,3 +1,4 @@
+import React from 'react';
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
 import RecentDocuments from '../components/RecentDocuments';

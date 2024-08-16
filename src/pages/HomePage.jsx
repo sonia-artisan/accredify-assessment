@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/userSlice";
 import { fetchPersonalUser } from "../redux/personalUserSlice";
-import { useEffect } from "react";
-import '/src/styles/pages/Homepage.scss';
+import React, { useEffect } from "react";
+import '../styles/pages/HomePage.scss';
 
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
