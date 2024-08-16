@@ -1,5 +1,6 @@
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
+import RecentDocuments from '../components/RecentDocuments';
 
 const DocumentsPage = () => {
   return (
@@ -8,6 +9,7 @@ const DocumentsPage = () => {
           <Title titleText='Documents Page' />
           <Subtitle subtitleText='View all your documents here!' />
       </div>
+      <RecentDocuments />
     </div>
   )
 }
