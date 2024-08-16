@@ -62,9 +62,9 @@ const SignInPage = () => {
 					</div>
 					<p className="mt-3 body flex gap-2">
 						Don&apos;t have an account?{" "}
-						<div className="text-accent" href="/auth/sign-up">
+						<a className="text-accent" href="/auth/sign-up">
 							Signup
-						</div>
+						</a>
 					</p>
 					<div className="mt-8 flex justify-center">
 						<Button label="Sign In" isToggle onClick={handleLogin} />

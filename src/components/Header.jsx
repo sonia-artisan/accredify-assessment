@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/userSlice";
 import { fetchPersonalUser } from "../redux/personalUserSlice";
 import { toggleUserType } from "../redux/toggleSlice";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/components/Header.scss';
 
 import Button from './Button';

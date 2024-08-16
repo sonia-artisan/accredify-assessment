@@ -10,7 +10,7 @@ const PopupMenu = ({ userName }) => {
 	const navigateTo = useNavigation();
 
   return (
-    <div className='popup-menu'>
+    <div  data-testid="popup-menu" className='popup-menu'>
       <div className='flex flex-col gap-6'>
         <div className='flex gap-4'>
 					<UserIcon size='50px' />

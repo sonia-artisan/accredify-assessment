@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/userSlice";
 import { fetchPersonalUser } from "../redux/personalUserSlice";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import SampleUserIcon from "/src/assets/managed_user.png";
 
 const UserIcon = ({ isSidebar, size }) => {
@@ -19,8 +19,8 @@ const UserIcon = ({ isSidebar, size }) => {
 	  }, [dispatch, userType]);
   
   const userImage = userType === 'managedUser' 
-	? userData.data?.record?.data?.profile_picture_url 
-	: personalUserData.data?.record?.data?.profile_picture_url;
+	? userData?.data?.record?.data?.profile_picture_url 
+	: personalUserData?.data?.record?.data?.profile_picture_url;
   
 
 	return (

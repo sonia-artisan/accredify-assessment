@@ -1,3 +1,4 @@
+import React from "react";
 import UserIcon from "./UserIcon";
 import '../styles/components/Button.scss';
 

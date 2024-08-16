@@ -1,3 +1,4 @@
+import React from 'react';
 import ActionsButton from '../assets/actions_button.svg';
 
 const Action = () => {
