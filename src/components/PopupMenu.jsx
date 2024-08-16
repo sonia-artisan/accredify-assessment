@@ -12,8 +12,8 @@ const PopupMenu = ({ userName }) => {
   return (
     <div className='popup-menu'>
       <div className='flex flex-col gap-6'>
-        <div className='flex gap-6'>
-					<UserIcon />
+        <div className='flex gap-4'>
+					<UserIcon size='50px' />
 					<div>
 						<div className='text-[0.95rem] font-bold'>{userName}</div>
 						<div className='body text-subtitle'>Recipient</div>

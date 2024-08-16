@@ -41,7 +41,7 @@ const Header = () => {
     <div className='header-background'>
         <div className='header-foreground'>
           <Button label={userType === 'managedUser' ? 'Managed User' : 'Personal User'} isToggle onClick={handleToggleClick} />
-          <Button label={userName} icon={ChevronDown} onClick={handleMenuButtonClick} isPopupOpen={isPopupOpen}/>
+          <Button label={userName} icon={ChevronDown} onClick={handleMenuButtonClick} isPopupOpen={isPopupOpen} size="24px" />
           {isPopupOpen && <PopupMenu userName={userName}/>}
         </div>
     </div>

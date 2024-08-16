@@ -55,7 +55,7 @@ const Sidebar = () => {
 	return (
 		<aside className='sidebar'>
 			<nav>
-				<UserIcon isSidebar/>
+				<UserIcon isSidebar size={'40px'}/>
 
 				<ul>
 					{sidebarItems.map((item) => (
