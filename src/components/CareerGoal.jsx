@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCareerGoal } from '../../redux/careerGoalSlice';
+import { fetchCareerGoal } from '../redux/careerGoalSlice';
 import { getIndefiniteArticle } from '/src/utils/grammarFormatting.js';
 import { useNavigation } from '/src/utils/navigateTo';
 import { useEffect } from 'react';
 
-import Container from '../Container';
-import CircularProgress from '../CircularProgress';
+import Container from './Container';
+import CircularProgress from './CircularProgress';
 
 const CareerGoal = () => {
   const dispatch = useDispatch();

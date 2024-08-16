@@ -7,8 +7,8 @@ import '/src/styles/pages/Homepage.scss';
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
 import SectionHeading from '../components/SectionHeading';
-import CareerGoal from '../components/homepage/CareerGoal';
-import RecentDocuments from '../components/homepage/RecentDocuments';
+import CareerGoal from '../components/CareerGoal';
+import RecentDocuments from '../components/RecentDocuments';
 
 const HomePage = () => {
 	const dispatch = useDispatch();
